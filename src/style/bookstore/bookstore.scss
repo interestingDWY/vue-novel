@@ -1,0 +1,167 @@
+.bookstore{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #fff;
+    .head{
+        height: 3rem;
+        width: 100%;
+        background-color: rgb(252, 249, 249);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: #666666;
+        border-bottom: 2px solid #333;
+        letter-spacing: .2rem;
+        .left,.right{
+            width: 6rem;
+            height: 3rem;
+            text-align: center;
+            line-height: 3rem;
+            letter-spacing: .1rem;
+            i{
+                
+                margin-right: .2rem;
+            }
+        }
+        .center{
+            font-size: 1rem;
+        }
+    }
+    .content{
+        width: 96%;
+        margin: 0 2%;
+        // width: 100%;
+        // height: 27.5rem;
+        // max-height: 100%;
+        overflow: auto;
+        .bookItem, .swipe-wrapper{
+            width: 100%;
+            height: 100%;
+            // box-sizing: border-box;
+            // margin-bottom: 3rem;
+            .swipe_item{
+                width: 100%;
+                // height: 5rem;
+                background-color: rgb(219, 219, 212);
+                margin-top: .5rem;
+                box-sizing: border-box;
+                padding: .5rem;
+                // box-shadow: 5px 5px 5px #999;
+                .item-inner{
+                    width: 100%;
+                    height: 90%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .icon{
+                        width: 20%;
+                        height: 4rem;
+                    }
+                    .text{
+                        width: 80%;
+                        text-align: left;
+                        padding-left: 1rem;
+                        .item-name{
+                            height: 2rem;
+                            line-height: 2rem;
+                            text-align: left;
+                            font-size: .8rem;
+                            font-weight: bold;
+                        }
+                        p{
+                            height: 1.2rem;
+                            line-height: 1.2rem;
+                            text-align: left;
+                            font-size: .6rem;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+                }
+            }
+        }
+        .emptyshow{
+            width: 100%;
+            height: 100%;
+            // background: #eeebdc;
+            
+        }
+    }
+    .myReading{
+        position: absolute;
+        top: .8rem;
+        right: .8rem;
+    }
+    .readingTime{
+        display: none;
+        width: 5rem;
+        position: absolute;
+        height: 3rem;
+        top: 2.4rem;
+        right: 0.3rem;
+        background-color: rgb(150, 150, 150);
+        z-index: 999;
+        box-sizing: border-box;
+        border-radius: 5px;
+        &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: -.98rem;
+            right: 0.2rem;
+            width: 0px;
+            height: 0px;
+            border-top: .5rem solid transparent;
+            border-left: .52rem solid transparent;
+            border-right: .52rem solid transparent;
+            border-bottom: .5rem solid rgb(155, 155, 155);
+            z-index: 999;
+        }
+        .setTime{
+            color: rgb(255, 255, 255);
+            width: 100%;
+            // box-sizing: border-box;
+            padding: 1% 1%;
+            text-align: center;
+            font-size: .6rem;
+            background-color: rgb(150, 150, 150);
+            &:hover{
+                background-color: rgb(214, 213, 213);
+                color:  rgb(37, 37, 37);
+            }
+
+        }
+        .normal{
+            height: 1.2rem;
+            // widows: 80%;
+            &:hover{
+                background-color: rgb(196, 193, 193);
+                color:  rgb(56, 56, 56);
+            }
+        }
+        .setTime{
+            height: 1.2rem;
+            &:hover{
+                background-color: rgb(196, 193, 193);
+                color:  rgb(56, 56, 56);
+            }
+        }
+        .timepicker{
+            display: none;
+            background: rgb(148, 148, 148);
+            position: absolute;
+            top: 2.3rem;
+            right: 0rem;
+            div{
+                &:hover{
+                    background-color: rgb(196, 193, 193);
+                    color:  rgb(56, 56, 56);
+                }
+            }
+        }
+    }
+}
